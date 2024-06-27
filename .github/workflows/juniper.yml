@@ -1,0 +1,24 @@
+name: 'Execute N-BKP Juniper'
+on:
+  schedule:
+    - cron: '0 2 * * *'
+
+env:
+  device_username: ${{ secrets.DEVICE_USERNAME }}
+  device_password: ${{ secrets.DEVICE_PASSWORD }}
+  #opsgenie_api_key: ${{secrets.OPSGENIE_API_KEY}}
+
+jobs: 
+  execute_scripts:
+    runs-on: [my_runner]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Run Pyhton Scripts
+        run: | 
+          python3 environment/juniper/junos.py        
+          pwd
+      - name: Check created files
+        run: |
+          ls -la /path_to_file/device_name/*.txt
+         

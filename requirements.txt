@@ -1,0 +1,5 @@
+pip3 install netmiko
+pip3 install pyjq
+pip3 install json
+pip3 install csv
+pip install requests

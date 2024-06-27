@@ -1,0 +1,10 @@
+ {
+"hostname": "",
+"ip": "",
+"platform": "juniper_junos",
+"device_type": "router",
+"datacenter": "nome_dc",
+"category": "pasta_por_categoria",
+"port": "22",
+ "command": "show configuration"
+ }]

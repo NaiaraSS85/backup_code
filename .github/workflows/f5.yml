@@ -1,0 +1,23 @@
+name: 'Execute N-BKP F5'
+on:
+  schedule:
+    - cron: '36 00 * * *'
+
+env:
+  device_username: ${{ secrets.DEVICE_USERNAME }}
+  device_password: ${{ secrets.DEVICE_PASSWORD }}
+  #opsgenie_api_key: ${{secrets.OPSGENIE_API_KEY}}
+
+jobs: 
+  execute_scripts:
+    runs-on: [my_runner]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Run Pyhton Scripts
+        run: | 
+          python3 environment/f5_ltm/f5_ltm.py        
+          pwd
+      - name: Check created files
+        run: |
+          ls -la /path_to_file/ATLQTSi5000-1/*.txt

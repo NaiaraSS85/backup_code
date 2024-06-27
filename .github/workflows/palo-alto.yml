@@ -1,0 +1,23 @@
+name: 'Execute N-BKP PALO ALTO'
+on:
+  schedule:
+    - cron: '0 1 * * *'
+
+env:
+  device_username: ${{ secrets.DEVICE_USERNAME }}
+  device_password: ${{ secrets.DEVICE_PASSWORD }}
+  #opsgenie_api_key_netsec: ${{secrets.OPSGENIE_API_KEY_NETSEC}}
+
+jobs: 
+  execute_scripts:
+    runs-on: [my_runner]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Run Pyhton Scripts
+        run: | 
+          python3 environment/palo_alto/panos.py        
+          pwd
+      - name: Check created files
+        run: |
+          ls -la /path_to_file/*.txt
