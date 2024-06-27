@@ -7,17 +7,13 @@ Support for Various Network Devices: Backup configurations for Cisco, Palo Alto,
 Redundant Storage in VMs: Store backups redundantly in VMs on QTS ATL and QTS CHI for increased reliability.
 Secure Credential Management: Access credentials for network devices and VMs are securely stored using GitHub Secrets.
 Easily Configurable: Customize backup settings and schedule according to specific requirements.
-# Usage
-Fork or clone this repository to your GitHub account or local machine.
 
-git clone https://github.com/stone-payments/network-core-backup
 
 Configure access credentials for network devices and VMs in the GitHub Secrets settings of your repository. Required secrets include:
 
 DEVICE_USERNAME: Username for accessing network devices.  
 DEVICE_PASSWORD: Password for accessing network devices.  
-VM_USERNAME: Username for logging into VMs.  
-VM_PASSWORD: Password for logging into VMs.  
+  
 
 Customize backup settings in the backup.py script if necessary. You may adjust backup schedules, storage locations, or any other parameters based on your requirements.
 
