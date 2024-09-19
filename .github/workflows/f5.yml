@@ -1,7 +1,7 @@
 name: 'Execute N-BKP F5'
 on:
   schedule:
-    - cron: '36 00 * * *'
+    - cron: ''
 
 env:
   device_username: ${{ secrets.DEVICE_USERNAME }}
