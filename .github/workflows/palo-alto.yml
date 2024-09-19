@@ -1,7 +1,7 @@
 name: 'Execute N-BKP PALO ALTO'
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: ''
 
 env:
   device_username: ${{ secrets.DEVICE_USERNAME }}
