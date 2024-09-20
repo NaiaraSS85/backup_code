@@ -1,8 +1,4 @@
 name: 'Execute N-BKP Cisco'
-on:
-  schedule:
-    - cron: ''
-
 env:
   device_username: ${{ secrets.DEVICE_USERNAME }}
   device_password: ${{ secrets.DEVICE_PASSWORD }}
