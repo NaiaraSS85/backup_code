@@ -1,7 +1,4 @@
 name: 'Execute N-BKP Juniper'
-on:
-  schedule:
-    - cron: ''
 
 env:
   device_username: ${{ secrets.DEVICE_USERNAME }}
