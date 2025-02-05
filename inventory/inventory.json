@@ -6,5 +6,5 @@
 "datacenter": "nome_dc",
 "category": "pasta_por_categoria",
 "port": "22",
- "command": "show configuration"
+ "command": "show configuration | display set"
  }]
